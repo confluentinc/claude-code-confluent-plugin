@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "confluent-infra": {
+      "command": "node",
+      "args": ["dist/index.js"],
+      "env": {
+        "CONFLUENT_CLOUD_API_KEY": "${CONFLUENT_CLOUD_API_KEY}",
+        "CONFLUENT_CLOUD_API_SECRET": "${CONFLUENT_CLOUD_API_SECRET}"
+      }
+    }
+  }
+}
