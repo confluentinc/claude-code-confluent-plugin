@@ -4,7 +4,7 @@ A Claude Code plugin that lets developers build Confluent Cloud infrastructure a
 
 ## Architecture
 
-This plugin provides a single MCP server (`confluent-infra`) with 14 tools covering full Confluent Cloud lifecycle management: infrastructure provisioning + data plane operations.
+This plugin provides a single MCP server (`confluent-infra`) with 15 tools covering full Confluent Cloud lifecycle management: infrastructure provisioning + data plane operations.
 
 ## Quick Start
 
@@ -43,27 +43,29 @@ Claude Code will automatically detect the `.mcp.json` configuration and start th
 ### 4. Use the slash commands
 
 **Environments:**
-- `/environments:create` — Create a new Confluent Cloud environment
-- `/environments:list` — List all environments
-- `/environments:delete` — Delete an environment
+- `/environments-create` — Create a new Confluent Cloud environment
+- `/environments-list` — List all environments
+- `/environments-update` — Update environment name or governance package
+- `/environments-use` — Set active environment for subsequent commands
+- `/environments-delete` — Delete an environment
 
 **Clusters:**
-- `/clusters:create` — Create a Kafka cluster (with provisioning wait + API key creation)
-- `/clusters:list` — List clusters in an environment
-- `/clusters:delete` — Delete a cluster
+- `/clusters-create` — Create a Kafka cluster (with provisioning wait + API key creation)
+- `/clusters-list` — List clusters in an environment
+- `/clusters-delete` — Delete a cluster
 
 **Topics:**
-- `/topics:create` — Create a Kafka topic
-- `/topics:list` — List topics in a cluster
-- `/topics:delete` — Delete a topic
+- `/topics-create` — Create a Kafka topic
+- `/topics-list` — List topics in a cluster
+- `/topics-delete` — Delete a topic
 
 **API Keys:**
-- `/api-keys:create` — Create a cluster-scoped API key
-- `/api-keys:list` — List API keys
-- `/api-keys:delete` — Delete an API key
+- `/api-keys-create` — Create a cluster-scoped API key
+- `/api-keys-list` — List API keys
+- `/api-keys-delete` — Delete an API key
 
 **Setup:**
-- `/setup:streaming-app` — Full end-to-end: environment → cluster → API key → topics → optional app scaffold
+- `/setup-streaming-app` — Full end-to-end: environment → cluster → API key → topics → optional app scaffold
 
 ## MCP Tools
 
@@ -73,6 +75,7 @@ Claude Code will automatically detect the `.mcp.json` configuration and start th
 |------|-------------|
 | `create_environment` | Create a Confluent Cloud environment |
 | `list_environments` | List all environments |
+| `update_environment` | Update environment name or governance package |
 | `delete_environment` | Delete an environment |
 | `create_cluster` | Create a Kafka cluster (returns immediately, async provisioning) |
 | `get_cluster` | Get cluster details and provisioning status |
