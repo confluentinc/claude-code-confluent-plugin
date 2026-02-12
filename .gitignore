@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.env
+.env.*
+.idea/
+*.tsbuildinfo
+.confluent-context.json
+.DS_Store
+.claude/settings.local.json
