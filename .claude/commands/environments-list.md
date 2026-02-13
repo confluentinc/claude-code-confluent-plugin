@@ -14,4 +14,4 @@ List all Confluent Cloud environments in the organization.
    | ID | Name | Stream Governance |
    |----|------|-------------------|
 
-3. If no environments exist, suggest creating one with `/project:environments-create`.
+3. If no environments exist, suggest creating one with `/environments-create`.

@@ -65,21 +65,21 @@ Keys are stored by `resource_id` (one key per resource, newest overwrites):
 
 | Command | Description |
 |---------|-------------|
-| `/project:environments-create` | Create environment with governance options |
-| `/project:environments-list` | List all environments |
-| `/project:environments-use` | Set active environment for subsequent commands |
-| `/project:environments-update` | Update environment name or governance package |
-| `/project:environments-delete` | Delete environment (checks for clusters first) |
-| `/project:clusters-create` | Create cluster + wait + API key |
-| `/project:clusters-list` | List clusters in an environment |
-| `/project:clusters-delete` | Delete a cluster |
-| `/project:topics-create` | Create topic (auto-resolves cluster API key) |
-| `/project:topics-list` | List topics in a cluster |
-| `/project:topics-delete` | Delete a topic |
-| `/project:api-keys-create` | Create cluster-scoped API key |
-| `/project:api-keys-list` | List API keys |
-| `/project:api-keys-delete` | Delete an API key |
-| `/project:setup-streaming-app` | End-to-end: env → cluster → key → topics → app scaffold |
+| `/environments-create` | Create environment with governance options |
+| `/environments-list` | List all environments |
+| `/environments-use` | Set active environment for subsequent commands |
+| `/environments-update` | Update environment name or governance package |
+| `/environments-delete` | Delete environment (checks for clusters first) |
+| `/clusters-create` | Create cluster + wait + API key |
+| `/clusters-list` | List clusters in an environment |
+| `/clusters-delete` | Delete a cluster |
+| `/topics-create` | Create topic (auto-resolves cluster API key) |
+| `/topics-list` | List topics in a cluster |
+| `/topics-delete` | Delete a topic |
+| `/api-keys-create` | Create cluster-scoped API key |
+| `/api-keys-list` | List API keys |
+| `/api-keys-delete` | Delete an API key |
+| `/setup-streaming-app` | End-to-end: env → cluster → key → topics → app scaffold |
 
 ## Common Cloud Regions
 

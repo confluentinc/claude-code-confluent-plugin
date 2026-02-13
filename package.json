@@ -1,19 +1,41 @@
 {
   "name": "@confluentinc/claude-code-confluent-plugin",
-  "version": "0.1.0",
+  "version": "0.1.0-alpha.3",
   "description": "Claude Code plugin for Confluent Cloud infrastructure provisioning",
   "type": "module",
   "main": "dist/index.js",
   "bin": {
     "claude-code-confluent-plugin": "dist/index.js"
   },
+  "files": [
+    "dist",
+    ".claude/commands",
+    ".claude-plugin",
+    ".mcp.json",
+    "CLAUDE.md"
+  ],
   "scripts": {
     "prebuild": "rm -rf dist",
     "build": "tsc",
     "start": "node dist/index.js",
-    "dev": "tsc --watch"
+    "dev": "tsc --watch",
+    "prepublishOnly": "npm run build"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/confluentinc/claude-code-confluent-plugin.git"
+  },
+  "homepage": "https://github.com/confluentinc/claude-code-confluent-plugin#readme",
+  "keywords": [
+    "confluent",
+    "kafka",
+    "claude-code",
+    "mcp",
+    "streaming",
+    "confluent-cloud"
+  ],
   "dependencies": {
+    "@confluentinc/claude-code-confluent-plugin": "^0.1.0-alpha.1",
     "@modelcontextprotocol/sdk": "^1.23.0"
   },
   "devDependencies": {
@@ -23,5 +45,5 @@
   "engines": {
     "node": ">=22.0.0"
   },
-  "license": "Apache-2.0"
+  "license": "Confluent Community License Agreement"
 }
