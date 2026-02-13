@@ -10,7 +10,7 @@ Help me create a cluster-scoped API key for a Kafka cluster.
 
 Follow these steps:
 
-1. **Resolve environment** — First, read the file `.confluent-context.json` in the project root. If it exists and contains an `environment_id`, use that environment automatically and tell me: "Using active environment **{name}** (`{id}`). Run `/project:environments-use` to change."
+1. **Resolve environment** — First, read the file `.confluent-context.json` in the project root. If it exists and contains an `environment_id`, use that environment automatically and tell me: "Using active environment **{name}** (`{id}`). Run `/environments-use` to change."
    If the file doesn't exist or has no environment set, call `list_environments` and ask me to pick one.
 
 2. **Pick cluster** — Call `list_clusters` for the chosen environment. Ask me to pick a cluster.
@@ -27,5 +27,5 @@ Follow these steps:
 6. **IMPORTANT:** Strongly remind me to save the API secret — it is only shown once and cannot be retrieved later! (The secret is stored in the local context file, but you should still save it separately for use outside Claude Code.)
 
 7. Suggest next steps:
-   - "Use this key to create topics with `/project:topics-create`"
-   - "List your API keys with `/project:api-keys-list`"
+   - "Use this key to create topics with `/topics-create`"
+   - "List your API keys with `/api-keys-list`"

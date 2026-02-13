@@ -10,8 +10,8 @@ Help me create a new Kafka cluster in Confluent Cloud.
 
 ## Step 1: Resolve environment
 
-Read the file `.confluent-context.json` in the project root. If it exists and contains an `environment_id`, use that environment automatically and tell me: "Using active environment **{name}** (`{id}`). Run `/project:environments-use` to change."
-If the file doesn't exist or has no environment set, call `list_environments` to show available environments. Present as a numbered list with ID and name. Ask me to pick one (or offer to create a new one with `/project:environments-create`).
+Read the file `.confluent-context.json` in the project root. If it exists and contains an `environment_id`, use that environment automatically and tell me: "Using active environment **{name}** (`{id}`). Run `/environments-use` to change."
+If the file doesn't exist or has no environment set, call `list_environments` to show available environments. Present as a numbered list with ID and name. Ask me to pick one (or offer to create a new one with `/environments-create`).
 
 ## Step 2: Gather cluster configuration (part 1 — name, type, cloud)
 
@@ -109,5 +109,5 @@ Show:
 - API Key ID (remind to save the secret)
 
 Suggest next steps:
-- "Create a topic with `/project:topics-create`"
-- "Or set up a full streaming app with `/project:setup-streaming-app`"
+- "Create a topic with `/topics-create`"
+- "Or set up a full streaming app with `/setup-streaming-app`"

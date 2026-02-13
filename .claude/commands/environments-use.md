@@ -24,5 +24,5 @@ Follow these steps:
 
 4. Confirm the active environment has been set:
    - "Active environment set to **{name}** (`{id}`)"
-   - "All subsequent commands (`/project:clusters-create`, `/project:topics-create`, etc.) will use this environment automatically."
-   - "To switch environments, run `/project:environments-use` again."
+   - "All subsequent commands (`/clusters-create`, `/topics-create`, etc.) will use this environment automatically."
+   - "To switch environments, run `/environments-use` again."

@@ -1,0 +1,21 @@
+{
+  "name": "confluent-cloud",
+  "version": "0.1.0",
+  "description": "Provision and manage Confluent Cloud infrastructure.",
+  "author": {
+    "name": "Confluent",
+    "url": "https://www.confluent.io"
+  },
+  "homepage": "https://github.com/confluentinc/claude-code-confluent-plugin#readme",
+  "repository": "https://github.com/confluentinc/claude-code-confluent-plugin",
+  "license": "Confluent Community License Agreement",
+  "keywords": [
+    "confluent",
+    "kafka",
+    "streaming",
+    "confluent-cloud",
+    "infrastructure"
+  ],
+  "commands": "../.claude/commands",
+  "mcpServers": "../.mcp.json"
+}

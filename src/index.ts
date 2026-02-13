@@ -597,6 +597,11 @@ server.tool(
 // --- Start server ---
 
 async function main() {
+  if (process.argv[2] === "install-commands") {
+    const { installCommands } = await import("./install-commands.js");
+    await installCommands();
+    return;
+  }
   const transport = new StdioServerTransport();
   await server.connect(transport);
 }

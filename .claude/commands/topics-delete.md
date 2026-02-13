@@ -10,7 +10,7 @@ Help me delete a Kafka topic from a cluster.
 
 Follow these steps:
 
-1. **Resolve environment** — First, read the file `.confluent-context.json` in the project root. If it exists and contains an `environment_id`, use that environment automatically and tell me: "Using active environment **{name}** (`{id}`). Run `/project:environments-use` to change."
+1. **Resolve environment** — First, read the file `.confluent-context.json` in the project root. If it exists and contains an `environment_id`, use that environment automatically and tell me: "Using active environment **{name}** (`{id}`). Run `/environments-use` to change."
    If the file doesn't exist or has no environment set, call `list_environments` and ask me to pick one.
 
 2. **Pick cluster** — Call `list_clusters` for the chosen environment. Ask me to pick a cluster.

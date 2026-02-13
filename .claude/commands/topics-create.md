@@ -10,12 +10,12 @@ Help me create a Kafka topic in Confluent Cloud.
 
 ## Step 1: Resolve environment
 
-Read the file `.confluent-context.json` in the project root. If it exists and contains an `environment_id`, use that environment automatically and tell me: "Using active environment **{name}** (`{id}`). Run `/project:environments-use` to change."
+Read the file `.confluent-context.json` in the project root. If it exists and contains an `environment_id`, use that environment automatically and tell me: "Using active environment **{name}** (`{id}`). Run `/environments-use` to change."
 If the file doesn't exist or has no environment set, call `list_environments` and ask me to pick one.
 
 ## Step 2: Pick cluster
 
-Call `list_clusters` for the chosen environment. If only one cluster exists, use it automatically. If multiple, present them and ask me to pick one. If none exist, suggest `/project:clusters-create`.
+Call `list_clusters` for the chosen environment. If only one cluster exists, use it automatically. If multiple, present them and ask me to pick one. If none exist, suggest `/clusters-create`.
 
 ## Step 3: Resolve cluster API key
 
@@ -62,4 +62,4 @@ Show the result:
 
 Suggest next steps:
 - "You can produce messages to this topic or create more topics"
-- "List existing topics with `/project:topics-list`"
+- "List existing topics with `/topics-list`"
