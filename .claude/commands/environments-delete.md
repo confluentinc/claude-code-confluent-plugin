@@ -15,7 +15,7 @@ Follow these steps:
 2. Ask me to pick the environment to delete.
 
 3. **WARNING:** Before deleting, warn me that all clusters and resources in the environment must be deleted first. Call `list_clusters` for the selected environment to check for existing clusters.
-   - If clusters exist, list them and tell me to delete them first using `/project:clusters-delete`.
+   - If clusters exist, list them and tell me to delete them first using `/clusters-delete`.
    - If no clusters exist, proceed.
 
 4. Ask for explicit confirmation: "Are you sure you want to delete environment **{name}** (`{id}`)? This cannot be undone."

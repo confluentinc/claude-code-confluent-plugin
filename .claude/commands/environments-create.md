@@ -34,5 +34,5 @@ Display:
 - Stream governance package
 
 Suggest next steps:
-- "You can now create a Kafka cluster in this environment using `/project:clusters-create`"
-- "Set this as your active environment with `/project:environments-use`"
+- "You can now create a Kafka cluster in this environment using `/clusters-create`"
+- "Set this as your active environment with `/environments-use`"

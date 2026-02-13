@@ -16,4 +16,4 @@ List API keys in the Confluent Cloud organization.
    | Key ID | Display Name | Owner | Resource | Created |
    |--------|-------------|-------|----------|---------|
 
-4. If no keys exist, suggest creating one with `/project:api-keys-create`.
+4. If no keys exist, suggest creating one with `/api-keys-create`.

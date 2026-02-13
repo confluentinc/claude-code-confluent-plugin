@@ -8,7 +8,7 @@ allowed-tools: mcp__confluent-infra__list_environments, mcp__confluent-infra__li
 
 List all topics in a Kafka cluster.
 
-1. **Resolve environment** — First, read the file `.confluent-context.json` in the project root. If it exists and contains an `environment_id`, use that environment automatically and tell me: "Using active environment **{name}** (`{id}`). Run `/project:environments-use` to change."
+1. **Resolve environment** — First, read the file `.confluent-context.json` in the project root. If it exists and contains an `environment_id`, use that environment automatically and tell me: "Using active environment **{name}** (`{id}`). Run `/environments-use` to change."
    If the file doesn't exist or has no environment set, call `list_environments` and ask me to pick one.
 
 2. **Pick cluster** — Call `list_clusters` for the chosen environment. Ask me to pick a cluster.
@@ -24,4 +24,4 @@ List all topics in a Kafka cluster.
    | Topic Name | Partitions |
    |------------|------------|
 
-6. If no topics exist, suggest creating one with `/project:topics-create`.
+6. If no topics exist, suggest creating one with `/topics-create`.

@@ -14,33 +14,43 @@ This plugin provides a single MCP server (`confluent-infra`) with 15 tools cover
 - [Claude Code CLI](https://docs.anthropic.com/en/docs/claude-code)
 - A [Confluent Cloud](https://confluent.cloud/) account with an API key
 
-### 1. Clone and build
+### 1. Set environment variables
 
-```bash
-git clone https://github.com/confluentinc/claude-code-confluent-plugin.git
-cd claude-code-confluent-plugin
-npm install
-npm run build
-```
-
-### 2. Set environment variables
+Add these to your shell profile (`~/.bashrc`, `~/.zshrc`, etc.):
 
 ```bash
 export CONFLUENT_CLOUD_API_KEY=your-api-key
 export CONFLUENT_CLOUD_API_SECRET=your-api-secret
 ```
 
-Generate API keys at [Confluent Cloud Settings > API Keys](https://confluent.cloud/settings/api-keys). Use a Cloud resource management API key (not a cluster-scoped key).
+Generate API keys at [Confluent Cloud Settings > API Keys](https://confluent.cloud/settings/api-keys). Use a **Cloud resource management** API key (not a cluster-scoped key).
 
-### 3. Open Claude Code
+### 2. Add the MCP server to Claude Code
+
+```bash
+claude mcp add -s user confluent-infra \
+  -e CONFLUENT_CLOUD_API_KEY=${CONFLUENT_CLOUD_API_KEY} \
+  -e CONFLUENT_CLOUD_API_SECRET=${CONFLUENT_CLOUD_API_SECRET} \
+  -- npx -y @confluentinc/claude-code-confluent-plugin@latest
+```
+
+This registers the plugin globally so it's available in any directory.
+
+### 3. Install slash commands
+
+```bash
+npx @confluentinc/claude-code-confluent-plugin@latest install-commands
+```
+
+This copies the plugin's slash commands to `~/.claude/commands/` so they're available globally.
+
+### 4. Open Claude Code
 
 ```bash
 claude
 ```
 
-Claude Code will automatically detect the `.mcp.json` configuration and start the MCP server.
-
-### 4. Use the slash commands
+### 5. Use the slash commands
 
 **Environments:**
 - `/environments-create` — Create a new Confluent Cloud environment
@@ -95,22 +105,7 @@ Claude Code will automatically detect the `.mcp.json` configuration and start th
 
 ## Configuration
 
-The `.mcp.json` file configures the MCP server:
-
-```json
-{
-  "mcpServers": {
-    "confluent-infra": {
-      "command": "node",
-      "args": ["dist/index.js"],
-      "env": {
-        "CONFLUENT_CLOUD_API_KEY": "${CONFLUENT_CLOUD_API_KEY}",
-        "CONFLUENT_CLOUD_API_SECRET": "${CONFLUENT_CLOUD_API_SECRET}"
-      }
-    }
-  }
-}
-```
+The `claude mcp add` command in [Step 2](#2-add-the-mcp-server-to-claude-code) registers the MCP server in your user-level Claude Code settings (`~/.claude.json`), making it available from any directory.
 
 ## Development
 
