@@ -25,7 +25,7 @@ export CONFLUENT_CLOUD_API_SECRET=your-api-secret
 
 Generate API keys at [Confluent Cloud Settings > API Keys](https://confluent.cloud/settings/api-keys). Use a **Cloud resource management** API key (not a cluster-scoped key).
 
-### 2. Add the MCP server to Claude Code
+### 2. Add the 'Claude Code plugin for Confluent' to Claude Code
 
 ```bash
 claude mcp add -s user confluent-infra \
