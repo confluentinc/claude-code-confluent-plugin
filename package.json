@@ -35,7 +35,7 @@
     "confluent-cloud"
   ],
   "dependencies": {
-    "@confluentinc/claude-code-confluent-plugin": "^0.1.0-alpha.1",
+    "@confluentinc/claude-code-confluent-plugin": "^0.1.0-alpha.3",
     "@modelcontextprotocol/sdk": "^1.23.0"
   },
   "devDependencies": {
