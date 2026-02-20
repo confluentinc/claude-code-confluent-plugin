@@ -11,3 +11,8 @@ renovatebot:
     enable: true
 semaphore:
   enable: true
+  managed_sections:
+    - version
+    - name
+    - agent
+    - global_job_config
