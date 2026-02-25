@@ -26,7 +26,6 @@ global_job_config:
     commands:
       - checkout
       - make show-args
-      - . vault-setup
       - make init-ci
   epilogue:
     always:
