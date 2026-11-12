@@ -16,6 +16,6 @@
     "confluent-cloud",
     "infrastructure"
   ],
-  "commands": "../.claude/commands",
-  "mcpServers": "../.mcp.json"
+  "commands": "./.claude/commands",
+  "mcpServers": "./.mcp.json"
 }
